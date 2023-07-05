@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+/* Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html, body{
+    min-height: 100%;
+}
+
+
+/* Content section */
+
+.wrapper{
+    display: flex;
+    height: 100%;
+}
+
+.content{
+    flex: 4;
+    background-color: hsl(0, 100%, 99%);
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 100vh);
+}
+
+
+/* Sidebar */
+
+.sidebar{
+    flex: 1;
+    background-color: hsl(12, 65%, 49%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nav-menu{
+    position: sticky;
+    top: 35%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-right: 20%;
+}
+
+.nav-menu a{
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: hsl(0, 100%, 99%);
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 5px rgb(66, 40, 28);
+}
+
+
+/* Intro (Home) section */
+
+.home{
+    height: min(100%, 1080px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 4rem;
+}
+
+
+.home button{
+    border: solid 1px hsl(12, 65%, 49%);
+    padding: 20px 60px;
+    background-color: hsl(12, 65%, 49%); 
+    font-weight: bold;
+    color: hsl(0, 100%, 99%);
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+
+.home button:hover{
+    background-color: hsl(0, 100%, 99%);
+    color: hsl(12, 65%, 49%);
+    border: solid 1px hsl(12, 65%, 49%);
+    cursor: pointer;
+}
+
+.home button:active{
+    opacity: 0.5;
+}
+
+.home span:first-child{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.home span:last-child{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.home span{
+    color: hsl(12, 65%, 49%);
+}
+
+.home img{
+    border-radius: 50%;
+    border: solid 1px hsl(12, 65%, 49%);
+
+}
+
+/* About section */
+
+.about{
+    padding-top: 5%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.about-header{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.about-header span:first-child{
+    color: hsl(356, 13%, 26%);
+    margin-bottom: 2rem;
+}
+
+.about-header span:last-child{
+    color: hsl(15, 66%, 51%);
+    font-size: 2.3rem;
+    margin-bottom: 50px;
+}
+
+.about-header span:last-child, .about-header span:first-child{
+    font-weight: bolder;
+    text-align: center;
+}
+
+.about-content{
+    height: 100%;
+}
+
+.about-text{
+    color: hsl(0, 3%, 34%);
+    font-weight: bold;
+    width: 90%;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.about-grid{
+    width: 90%;
+    margin: auto;
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.about-info{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 70%;
+    margin: auto;
+}
+
+.about-exp{
+    width: 70%;
+    margin: auto;
+}
+
+.about-info span:first-child, .about-exp span:first-child{
+    color: hsl(15, 66%, 51%);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.about-info div, .about-exp div{
+    margin: 20px 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: center;
+    gap: 1.5rem;
+}
+
+.about-info div span, .about-exp div span{
+    color: hsl(12, 31%, 35%);
+    font-weight: bold;
+}
+
+.about-exp div span span{
+    color: hsla(12, 31%, 28%, 0.767);
+    font-size: 0.9rem;
+}
+
+
+/* Skills  section */
+
+.skills{
+    padding-top: 5%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.skills-intro{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-intro span:first-child{
+    color: hsl(12, 31%, 28%);
+    font-weight: bold;
+}
+
+.skills-intro span:last-child{
+    color: hsl(15, 66%, 51%);
+    font-weight: bold;
+    font-size: 3rem;
+    margin-top: 30px;
+}
+
+.skills-grid{
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+}
+
+.bar-section{
+    height: 25%;
+    width: 80%;
+    margin: auto;
+}
+
+.bar-prescription{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-weight: bold;
+    color: hsl(12, 31%, 28%);
+    margin-bottom: 10px;
+
+}
+
+.bar-progress{
+    position: relative;
+    background-color: hsl(0, 7%, 83%);
+    height: 10px;
+    width: 100%;
+}
+
+.colored-progress{
+    position: absolute;
+    left: 0;
+    height: inherit;
+    background-color: hsl(15, 66%, 51%);
+}
+
+
+.bar-progress, .colored-progress{
+    border-radius: 3px;
+}
+
+/* Contact section */
+
+.contact-me, .contact-intro{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+
+.contact-me{
+    justify-content: space-around;
+    padding-top: 5%;
+}
+
+
+.contact-intro span:first-child{
+    color: hsl(12, 31%, 28%);
+    font-weight: bold;
+}
+
+.contact-intro span:last-child{
+    color: hsl(15, 66%, 51%);
+    font-weight: bold;
+    font-size: 3rem;
+    margin-top: 30px;
+}
+
+.contact-grid{
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    padding-bottom: 9%;
+    margin-top: 5%;
+}
+
+.contact-input{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 2fr 1fr;
+}
+
+.contact-input input:nth-of-type(3){
+    grid-column: 1/3;
+}
+
+.contact-input input:nth-of-type(4){
+    grid-column: 1/3;
+}
+
+.contact-input input{
+    background-color: hsl(20, 5%, 88%);
+    font: inherit;
+    border: solid 1px hsla(4, 12%, 50%, 0.377);
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.contact-input input::placeholder{
+    color: hsl(4, 12%, 50%);
+    font-weight: bold;
+
+}
+
+.contact-input button{
+    align-self: start;
+    justify-self: start;
+    border: solid 1px hsl(12, 65%, 49%);
+    padding: 20px 40px;
+    background-color: hsl(12, 65%, 49%); 
+    font-weight: bold;
+    color: hsl(0, 100%, 99%);
+    border-radius: 10px;
+    transition: 0.25s;
+    margin: auto 6%;
+}
+
+
+.contact-input button:hover{
+    background-color: hsl(0, 100%, 99%);
+    color: hsl(12, 65%, 49%);
+    border: solid 1px hsl(12, 65%, 49%);
+    cursor: pointer;
+}
+
+.contact-info{
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.contact-info span{
+    display: inline-block;
+    width: 80%;
+    color: hsl(9, 18%, 29%);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 20px auto;
+}
+
+.contact-info span span{
+    font-size: 1rem;
+    color: hsla(9, 18%, 29%, 0.767);
+    margin: 0;
+}
+
+
+
+
+@media screen and (max-width: 950px){
+    .sidebar{
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 710px){
+    .about-grid{
+        grid-template-columns: 1fr;
+        grid-row-gap: 50px;
+    }
+
+    .about-info{
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .about-exp{
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .skills-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns: 1fr;
+        padding-bottom: 0%;
+    }
+
+    .contact-info span{
+        margin-bottom: 0px;
+    }
+
+}
+
+@media screen and (max-height: 860px){
+    .contact-me{
+        padding-top: 0%;
+    }
+}
+
+@media screen and (max-height: 790px){
+    .content{
+        grid-template-rows: repeat(4, 120vh);
+    }
+    
+    .contact-info span{
+        margin-top: 0px;
+
+    }
+
+    .contact-grid{
+        padding-bottom: 0;
+    }
+
+    .contact-intro span:last-child{
+        margin-top: 0px;
+    }
+
+    .about{
+        padding-top: 0px;
+    }
+
+    .about-header span:last-child, .about-header span:first-child{
+        margin: 0px;
+    }
+
+    .about-header span:last-child{
+        font-size: 2rem;
+    }
+
+    .about-grid{
+        padding-top: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .skills-grid{
+        padding-top: 0px;
+    }
+
+    .skills-intro span:last-child{
+        font-size: 2rem;
+        margin-top: 0px;
+    }
+
+}
