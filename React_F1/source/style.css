@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+    color: white;
+}
+
+html, body, #root{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-image: url(images/background-image.jpg);
+}
+
+/* root */
+
+#root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+
+/* Sidebar */
+
+.div--sidebar{
+    position: absolute;
+    left: -29%;
+    height: 100%;
+    width: 30%;
+    background: rgb(112,129,133);
+    background: linear-gradient(0deg, rgba(112,129,133,1) 0%, rgba(235,154,133,1) 48%, rgba(65,84,107,1) 100%);
+    opacity: 0.5;
+}
+
+.div--sidebar:hover{
+    left: 0;
+}
+
+.div--sidebar, .div--sidebar:hover{
+    transition: left 0.25s ease-in-out;
+}
+
+
+.ul--city_list{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    list-style: none;
+    font-size: 60px;
+    width: 100%;
+    height: 100%;
+}
+
+.ul--city_list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+
+.ul--city_list li:hover{
+    background-color: rgb(94, 94, 204);
+    cursor: pointer;
+}
+
+/* main */
+
+.div--main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 90%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.356);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.div--bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(images/background-image.jpg);
+    filter: blur(5px);
+    z-index: -10;
+    background-position: top center;
+}
+
+.div--today{
+    flex: 3;
+}
+
+.div--future{
+    flex: 2;
+    background-color: rgba(255, 255, 255, 0.678);
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+/* today forecast */
+
+.div--today{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.div--temperature-today{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1--temperature{
+    font-size: 40px;
+}
+
+.h1--description{
+    font-size: 20px;
+}
+
+/* future forecast */
+
+.div--future{
+    display: grid;
+    overflow-x: scroll;
+}
+
+.div--future-day-forecast{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(113, 132, 142);
+}
+
+.div--short--desc h1, .div--short--desc h6, .h3--time, .div--date-future h1, .div--date-future h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(113, 132, 142);
+}
+
+/* Media */
+
+@media screen and (max-width: 500px) {
+    .div--main{
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    .ul--city_list li{
+        font-size: 14px;
+    }
+
+    
+}
+
+
+@media screen and (max-height: 670px) {
+    .div--future-day-forecast .div--short--desc{
+        font-size: 10px;
+    }
+
+    .div--future-day-forecast img {
+        width: 50px;
+    }
+
+    .div--date-future h1, .div--date-future h2{
+        font-size: 14px;
+    }
+}
+
